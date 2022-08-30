@@ -62,7 +62,11 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: I first checked the network tab of the console and
+    saw that there was a 500 Internal Server Error. This included
+    "uninitialized constant ToysController::Toys". Upon checking the controller,
+    I saw that the .create method was being called on Toys. This is a typo, so
+    I changed it to Toy.create and the form was successfully debugged.
 
 - Update the number of likes for a toy
 
